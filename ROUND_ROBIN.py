@@ -17,7 +17,6 @@ class Job:
         self.name = name
         self.arrtime = arrtime
         self.duration = duration
-        self.done = False
         self.alreadyExecute = False
 
     def __str__(self):
