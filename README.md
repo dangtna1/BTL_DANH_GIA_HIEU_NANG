@@ -4,6 +4,7 @@
     >> py FIFO.py
     The result might look something like:
 
+
 Statistics:
 ![](example/FIFO_statistics.png)
 
@@ -15,6 +16,7 @@ Plot:
     >> py ROUND_ROBIN.py
 
     The result might look something like:
+
 
 Statistics:
 ![](example/RR_statistics.png)
