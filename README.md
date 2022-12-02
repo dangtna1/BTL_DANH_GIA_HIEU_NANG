@@ -6,9 +6,11 @@
 
 
 Statistics:
+
 ![](example/FIFO_statistics.png)
 
 Plot:
+
 ![](example/FIFO_plot.png)
 
 
@@ -18,8 +20,10 @@ Plot:
     The result might look something like:
 
 
-Statistics:
+Statistics: 
+
 ![](example/RR_statistics.png)
 
 Plot:
+
 ![](example/RR_plot.png)
