@@ -10,7 +10,7 @@ POPULATION = 50000000
 SERVICE_DISCIPLINE = 'ROUND_ROBIN'
 LOGGED = True
 PLOTTED = True
-TIMESLIDE = 0.5
+TIMESLICE = 0.5
 
 class Job:
     def __init__(self, name, arrtime, duration):
@@ -51,15 +51,15 @@ class Server:
                 ''' get the first job to be served'''
                 # self.strat == 'ROUND_ROBIN' by default:
                 j = self.Jobs.pop( 0 )
-                if (j.duration > TIMESLIDE):
-                    j.duration -= TIMESLIDE
+                if (j.duration > TIMESLICE):
+                    j.duration -= TIMESLICE
                     ''' sum up the waiting time'''
                     if (j.alreadyExecute == False): #hasn't been executed the first time
                         self.waitingTime += self.env.now - j.arrtime
                     j.alreadyExecute = True
                     self.Jobs.append( j ) 
                     ''' yield an event for the job finish (but not actually finished)'''
-                    yield self.env.timeout( TIMESLIDE )
+                    yield self.env.timeout( TIMESLICE )
                 else:
                     ''' sum up the waiting time'''
                     if (j.alreadyExecute == False): #hasn't been executed the first time
